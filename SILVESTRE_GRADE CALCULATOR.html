@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input, button { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+    <label for="prelim">Prelim Grade:</label>
+    <input type="number" id="prelim" placeholder="Enter Prelim Grade (0-100)"><br>
+    
+    <label for="midterm">Midterm Grade:</label>
+    <input type="number" id="midterm" placeholder="Enter Midterm Grade (0-100)"><br>
+    
+    <label for="final">Final Grade:</label>
+    <input type="number" id="final" placeholder="Enter Final Grade (0-100)"><br>
+    
+    <button id="calculate">Calculate Final Grade</button>
+    
+    <h2 id="result"></h2>
+
+    <script>
+        document.getElementById("calculate").onclick = function() {
+            const prelim = parseFloat(document.getElementById("prelim").value);
+            const midterm = parseFloat(document.getElementById("midterm").value);
+            const final = parseFloat(document.getElementById("final").value);
+
+            const finalGrade = (prelim * 0.2) + (midterm * 0.3) + (final * 0.5);
+            document.getElementById("result").innerText = `Final Grade: ${finalGrade.toFixed(2)}`;
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
