@@ -1,0 +1,24 @@
+# Function to calculate preliminary grade
+def calculate_prelim_grade(quizzes, assignments, exam, participation):
+    # Assign weights to each component (example weights)
+    quiz_weight = 0.25
+    assignment_weight = 0.30
+    exam_weight = 0.35
+    participation_weight = 0.10
+
+    # Compute weighted average
+    prelim_grade = (quizzes * quiz_weight) + (assignments * assignment_weight) + (exam * exam_weight) + (participation * participation_weight)
+
+    return prelim_grade
+
+# Get inputs from the user
+quizzes = float(input("Enter quiz average: "))
+assignments = float(input("Enter assignment average: "))
+exam = float(input("Enter exam score: "))
+participation = float(input("Enter participation score: "))
+
+# Calculate the prelim grade
+prelim_grade = calculate_prelim_grade(quizzes, assignments, exam, participation)
+
+# Display the result
+print(f"Your preliminary grade is: {prelim_grade:.2f}")
